@@ -1,0 +1,196 @@
+.form{
+    width: 400px;
+    min-height: 500px;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius:10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.paragraph{
+    color:#696687;
+    margin-top: -25px;
+}
+.form img{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    user-select: none;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    color: #3e3863;
+}
+.inputContainer{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    color: #696687;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.inputContainer span{
+    height: 14px;
+    margin-top: 5px;
+    text-align: left;
+    width: fit-content;
+    line-height: 10px;
+    font-size: 0.7rem;
+    color: red;
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0.175);
+}
+.formInput{
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid silver;
+    padding-top: 10px;
+    height: 20px;
+    font-size: 16px;
+    padding-left: 30px;
+    width: 250px;
+    padding-bottom: 5px;
+}
+.uncompleted {
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid  red;
+    padding-top: 10px;
+    height: 20px;
+    font-size: 16px;
+    padding-left: 30px;
+    width: 250px;
+    padding-bottom: 5px;
+    animation: shake 300ms;
+}
+@keyframes shake {
+    25%{transform: translateX(5px)}
+    50%{transform: translateX(-5px)}
+    75%{transform: translateX(5px)}
+}
+
+.formInput:focus,
+.uncompleted:focus {
+    border-bottom: 1px solid  #4d61fc;
+}
+.contain{
+    position: relative;
+}
+.contain img{
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    z-index: 1;
+    top: -12px;
+}
+.checkboxContainer{
+    display: flex;
+    flex-direction: column;
+    height: 41px;
+}
+.checkContainer {
+    width: 350px;
+    display: flex;
+    font-size: 0.85rem;
+    flex-direction: row !important;
+    align-items: center;
+    text-align: center;
+    height: 20px !important;
+    justify-content: space-around;
+}
+
+input[type=checkbox] {
+    margin-left: 20px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1a73e8;
+    appearance: none;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    margin-top: 7px;
+    margin-right: 25px;
+}
+
+input[type=checkbox]:checked {
+    width: 16px;
+    height: 16px;
+    background-color: #1a73e8;
+    border-radius: 50%;
+}
+
+input[type=checkbox]:focus {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    border: 2px solid #004aaa;
+}
+.checkboxContainer span {
+    height: 12px;
+    margin-top: 5px;
+    text-align: left;
+    width: fit-content;
+    line-height: 10px;
+    font-size: 0.7rem;
+    color: red;
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0.175);
+    margin-left: 27px;
+}
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 275px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.formButtons button {
+    background-color: #4d61fc;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-in;
+    color: #fff;
+    padding: 10px 20px;
+}
+.formButtons button:hover {
+    background-color: #2036de;
+    transform: translateY(-3px);
+}
+.formButtons a {
+    color: #4d61fc;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease-in;
+}
+.formButtons a:hover {
+    color: #2036de;
+    transform: translateY(-3px);
+}
+.forget{
+    display: flex;
+    align-items: flex-start;
+    width: 300px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+}
+.forget a{
+    color: #4d61fc;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.forget a:hover{
+    color: #2036de;
+}
