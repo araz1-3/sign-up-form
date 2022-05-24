@@ -54,7 +54,7 @@ const Login = () => {
     const submitHandler =(e)=>{
         e.preventDefault()
         if (!Object.keys(errors).length){
-            fetch('http://localhost:3300/auth/login', {
+            fetch('https://api.freerealapi.com/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -63,8 +63,14 @@ const Login = () => {
                 })
             })
                 .then((response) => response.json())
-                .then((json) => console.log(json))
-            notify("you logged in successfully","success")
+                .then((json) =>{
+                    if (json.success === true){
+                        notify("you logged in successfully","success")
+                    }else {
+                        notify(json.message,"error")
+                    }
+                    console.log(json)
+                })
             console.log(data)
         }else {
             notify("invalid data!","error")

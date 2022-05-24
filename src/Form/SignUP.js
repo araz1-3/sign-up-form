@@ -21,9 +21,6 @@ import ConfirmPass from "../assests/lock (1).svg"
 //errors
 import {Validate} from "./Validate";
 
-//axios
-import axios from "axios";
-
 
 const SignUp = () => {
 
@@ -72,8 +69,17 @@ const SignUp = () => {
                     })
                 })
                     .then((response) => response.json())
-                    .then((json) => console.log(json))
-            notify("Your account has ben created successfully","success")
+                    .then((json) => {
+                        if (json.success === true){
+                            notify(json.message,"success")
+                            const token = json.token
+                            localStorage.setItem("tokenId",JSON.stringify(token))
+                        }else{
+                            notify(json.message,"error")
+                        }
+                        console.log(json)
+                        console.log(json.token)
+                    })
             console.log(data)
         }else {
             notify("invalid data!","error")
